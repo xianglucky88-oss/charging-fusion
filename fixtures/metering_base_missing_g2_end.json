@@ -1,0 +1,52 @@
+[
+  {
+    "source": "gateway-a",
+    "payload": {
+      "point_id": "ST-1-M",
+      "point_level": "station",
+      "reading_type": "cumulative",
+      "measured_at": "2026-11-01T00:00:00Z",
+      "value_kwh": 1000.0
+    }
+  },
+  {
+    "source": "gateway-a",
+    "payload": {
+      "point_id": "ST-1-M",
+      "point_level": "station",
+      "reading_type": "cumulative",
+      "measured_at": "2026-11-01T01:00:00Z",
+      "value_kwh": 1010.0
+    }
+  },
+  {
+    "source": "gateway-a",
+    "payload": {
+      "point_id": "G-1-M",
+      "point_level": "gun",
+      "reading_type": "cumulative",
+      "measured_at": "2026-11-01T00:00:00Z",
+      "value_kwh": 500.0
+    }
+  },
+  {
+    "source": "gateway-a",
+    "payload": {
+      "point_id": "G-1-M",
+      "point_level": "gun",
+      "reading_type": "cumulative",
+      "measured_at": "2026-11-01T01:00:00Z",
+      "value_kwh": 506.0
+    }
+  },
+  {
+    "source": "gateway-a",
+    "payload": {
+      "point_id": "G-2-M",
+      "point_level": "gun",
+      "reading_type": "cumulative",
+      "measured_at": "2026-11-01T00:00:00Z",
+      "value_kwh": 200.0
+    }
+  }
+]

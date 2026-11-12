@@ -1,0 +1,29 @@
+{
+  "attributions": [
+    {
+      "gun_point_id": "G-1-M",
+      "station_point_id": "ST-1-M",
+      "effective_from": "2026-10-31T00:00:00Z",
+      "effective_to": null
+    },
+    {
+      "gun_point_id": "G-2-M",
+      "station_point_id": "ST-1-M",
+      "effective_from": "2026-10-31T00:00:00Z",
+      "effective_to": null
+    },
+    {
+      "gun_point_id": "G-3-M",
+      "station_point_id": "ST-1-M",
+      "effective_from": "2026-11-01T00:30:00Z",
+      "effective_to": null
+    }
+  ],
+  "station_configs": [
+    {
+      "station_point_id": "ST-1-M",
+      "tolerance_kwh": 1.0,
+      "tolerance_ratio": 0.0
+    }
+  ]
+}

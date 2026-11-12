@@ -1,0 +1,12 @@
+[
+  {
+    "source": "gateway-a",
+    "payload": {
+      "point_id": "G-2-M",
+      "point_level": "gun",
+      "reading_type": "cumulative",
+      "measured_at": "2026-11-01T01:00:00Z",
+      "value_kwh": 203.5
+    }
+  }
+]

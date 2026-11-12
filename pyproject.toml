@@ -5,3 +5,4 @@ requires-python = ">=3.11"
 
 [project.scripts]
 charging-fusion = "charging_fusion.cli:main"
+charging-fusion-metering = "charging_fusion.metering_cli:main"

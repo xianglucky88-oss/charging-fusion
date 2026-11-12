@@ -1,0 +1,12 @@
+[
+  {
+    "source": "gateway-b",
+    "payload": {
+      "point_id": "ST-1-M",
+      "point_level": "station",
+      "reading_type": "cumulative",
+      "measured_at": "2026-11-01T01:00:00Z",
+      "value_kwh": 1011.0
+    }
+  }
+]

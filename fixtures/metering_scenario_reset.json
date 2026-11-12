@@ -1,0 +1,32 @@
+[
+  {
+    "source": "gateway-a",
+    "payload": {
+      "point_id": "ST-1-M",
+      "point_level": "station",
+      "reading_type": "cumulative",
+      "measured_at": "2026-11-01T02:00:00Z",
+      "value_kwh": 1018.0
+    }
+  },
+  {
+    "source": "gateway-a",
+    "payload": {
+      "point_id": "G-2-M",
+      "point_level": "gun",
+      "reading_type": "cumulative",
+      "measured_at": "2026-11-01T02:00:00Z",
+      "value_kwh": 207.0
+    }
+  },
+  {
+    "source": "gateway-a",
+    "payload": {
+      "point_id": "G-1-M",
+      "point_level": "gun",
+      "reading_type": "cumulative",
+      "measured_at": "2026-11-01T02:00:00Z",
+      "value_kwh": 1.5
+    }
+  }
+]
