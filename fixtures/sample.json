@@ -1,0 +1,32 @@
+[
+  {
+    "source": "operator-a",
+    "observed_at": "2026-11-01T08:00:00Z",
+    "payload": {
+      "station_id": "ST-01",
+      "charger_id": "G-01",
+      "status": "charging",
+      "energy_kwh": 12.3,
+      "order_id": "O-1"
+    }
+  },
+  {
+    "source": "operator-b",
+    "observed_at": "2026-11-01T08:00:00Z",
+    "payload": {
+      "station_id": "ST-02",
+      "charger_id": "G-08",
+      "status": "available",
+      "energy_kwh": 0,
+      "order_id": "O-2"
+    }
+  },
+  {
+    "source": "operator-a",
+    "observed_at": "2026-11-01T08:05:00Z",
+    "payload": {
+      "station_id": "ST-01",
+      "status": "fault"
+    }
+  }
+]
