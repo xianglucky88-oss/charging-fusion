@@ -12,6 +12,14 @@ def main() -> None:
     parser.add_argument("--database", required=True)
     parser.add_argument("--timeout", type=float, default=30.0)
     parser.add_argument("--raw-dir", help="directory for immutable raw HTTP responses")
+    parser.add_argument(
+        "--cache-dir",
+        help="directory for the persistent conditional-download cache (ETag/Last-Modified snapshots)",
+    )
+    parser.add_argument(
+        "--scope",
+        help="caller-declared access scope included in the cache request identity",
+    )
     parser.add_argument("--records-key", help="dot-separated JSON key containing the record list")
     args = parser.parse_args()
     if args.fixture:
@@ -23,6 +31,8 @@ def main() -> None:
             timeout=args.timeout,
             raw_dir=args.raw_dir,
             records_key=args.records_key,
+            cache_dir=args.cache_dir,
+            scope=args.scope,
         )
     print(json.dumps(result, ensure_ascii=False, sort_keys=True))
 
