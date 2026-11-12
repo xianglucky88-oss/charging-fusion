@@ -1,0 +1,13 @@
+[
+ {
+  "source": "operator-a",
+  "observed_at": "2026-11-01T08:10:00Z",
+  "payload": {
+   "station_id": "ST-01",
+   "charger_id": "G-01",
+   "status": "charging",
+   "order_id": "O-1",
+   "energy_kwh": 7.0
+  }
+ }
+]

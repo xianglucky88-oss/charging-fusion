@@ -1,8 +1,11 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from typing import Any, Callable
 
 from .normalize import normalize
 from .pipeline import IngestionPipeline
+from .reconstruct import DEFAULT_CONTINUITY_GAP_SECONDS, reconstruct
 from .sources import FixtureSource, HttpJsonSource
 from .storage import ObservationStore
 
@@ -30,3 +33,28 @@ def run_url(
 ) -> dict[str, int]:
     source = HttpJsonSource(url, timeout=timeout, raw_dir=raw_dir, records_key=records_key)
     return _run_records(source.read(), database)
+
+
+def reconstruct_database(
+    database: str,
+    *,
+    continuity_gap_seconds: int = DEFAULT_CONTINUITY_GAP_SECONDS,
+    persist: bool = True,
+) -> dict[str, Any]:
+    """Query an existing SQLite evidence database and rebuild its fragments.
+
+    This is the late-arrival query path: ingest is unaffected, but any new
+    observation changes the rebuild, and ``build_impact`` names the fragments
+    that were added, revised or removed.  All evidence is recomputed from the
+    observation table; persisted segments are only a comparison baseline.
+    """
+    store = ObservationStore(database)
+    try:
+        observations = store.load_observations()
+        result = reconstruct(observations, continuity_gap_seconds=continuity_gap_seconds)
+        if persist:
+            impact = store.replace_segments(result["segments"])
+            result["build_impact"] = impact
+        return result
+    finally:
+        store.close()
